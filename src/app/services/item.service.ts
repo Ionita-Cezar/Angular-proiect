@@ -8,7 +8,7 @@ import { Item } from 'src/models/item';
 })
 export class ItemService {
 
-  readonly baseUrl = "https://localhost:44385/api.item"
+  readonly baseUrl = "https://localhost:44385/api/item"
   constructor(public httpClient: HttpClient) { }
 
   getItem(): Observable<Item[]>{

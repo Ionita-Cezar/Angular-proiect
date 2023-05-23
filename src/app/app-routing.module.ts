@@ -5,9 +5,9 @@ import { InventoryComponent } from './pages/inventory/inventory.component';
 import { FormComponent } from './pages/form/form.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'inventory', component: InventoryComponent},
-  {path: 'createItem', component: FormComponent}
+  { path: '', component: HomeComponent },
+  { path: 'inventory', component: InventoryComponent },
+  { path: 'createItem', component: FormComponent }
 ];
 
 @NgModule({

@@ -13,16 +13,25 @@ export class InventoryComponent implements OnInit {
   error?: string;
   itemList!: Item[];
   items:string[] = [
-    'text', 'text', 'text', 'text', 'text', 'text'
+    'text', 'text', 'text', 'text', 'text'
   ];
 
   constructor(public dialog:MatDialog, public itemService: ItemService) { }
+
   getItem(): void {
     this.itemService.getItem().subscribe((list: Item[]) => {
       this.itemList = list;
     }, (err) => {
       this.error = err.error;
-    })
+    });
+  }
+
+  deleteItem(id: number | undefined): void {
+    this.itemService.delete(id!).subscribe(
+      () => {
+      window.location.reload();
+    }, (err) => {
+    });
   }
 
   async openDialog() {
