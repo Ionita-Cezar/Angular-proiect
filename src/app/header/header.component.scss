@@ -52,6 +52,7 @@ button {
     border: none;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    position: relative;
 }
 
 button:hover {
@@ -59,12 +60,19 @@ button:hover {
     animation: buttonAnimation 1s infinite;
 }
 
-@keyframes buttonAnimation {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
+// scale animation
+// @keyframes buttonAnimation {
+//     0% { transform: scale(1); }
+//     50% { transform: scale(1.1); }
+//     100% { transform: scale(1); }
+// }
 
+// left-right animation
+@keyframes buttonAnimation {
+    0% { left: -20px; }
+    50% { left: 20px; }
+    100% { left: -20px; }
+}
 
 .burger{
     display: none;

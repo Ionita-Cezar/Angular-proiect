@@ -16,6 +16,7 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {
     this.CreateForm();
+    // this.dialogRef.updateSize('100%', '100%'); // changing form box size
   }
 
   private CreateForm(): void{

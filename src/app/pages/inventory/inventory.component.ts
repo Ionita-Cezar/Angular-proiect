@@ -18,7 +18,7 @@ export class InventoryComponent implements OnInit {
 
   constructor(public dialog:MatDialog, public itemService: ItemService) { }
 
-  getItem(): void {
+  getItem(): void { 
     this.itemService.getItem().subscribe((list: Item[]) => {
       this.itemList = list;
     }, (err) => {
